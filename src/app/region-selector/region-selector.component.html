@@ -1,0 +1,19 @@
+<mat-card fxLayout="row" fxLayoutGap="30px">
+  <mat-form-field appearance="fill">
+    <mat-label>Région</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let region of regions" [value]="region.name">
+        {{region.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Logiciel</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let software of softwares" [value]="software">
+        {{software}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>

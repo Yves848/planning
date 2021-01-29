@@ -1,0 +1,183 @@
+{"Plannings": [
+  {
+      "id": 0,
+      "cipCode": "1234567",
+      "name": "Lorette",
+      "address_1": "C'était bien, chez Lorette",
+      "address_2": "",
+      "postalCode": "62000",
+      "city": "Marseille",
+      "phone": "06060606",
+      "comment": "No Comment",
+      "contact" : {
+          "lastName": "Delpech",
+          "firstName": "Michel"
+      },
+      "agence" : {
+          "id": 0,
+          "name": "Agence 0",
+          "region": {
+              "id": 0,
+              "name": "Grand-Est",
+              "country": {
+                  "id": 0,
+                  "name": "France"
+              }
+          },
+          "rrsc" : {
+            "id": 0,
+            "lastName": "rrsc",
+            "firstName": "chef",
+            "email": "chef@laboite.com"
+          }
+      },
+      "oldSoftware": "SmartRX",
+      "oldSoftwareDate": "01/01/1980",
+      "actualSoftware": "WinPharma",
+      "actualSoftwareDate": "01/01/2000",
+      "orderedSoftware": "Durnal",
+      "orderedSoftwareDate": "01/01/2020",
+      "workstationCount": 72,
+      "confidentialsWorkstationCount": 1,
+      "distance": 100,
+      "travelTime": 1,
+      "details": "Jolie chanson",
+      "installationDate": "01/03/2021"
+  },
+  {
+      "id": 1,
+      "cipCode": "666999",
+      "name": "You're under arrest",
+      "address_1": "Cause you're the best",
+      "address_2": "",
+      "postalCode": "610000",
+      "city": "Paris",
+      "phone": "06070707",
+      "comment": "Sorry Angle, Sorry so",
+      "contact" : {
+          "lastName": "Gainsbourg",
+          "firstName": "Serge"
+      },
+      "agence" : {
+          "id": 1,
+          "name": "Agence 1",
+          "region": {
+              "id": 0,
+              "name": "Hauts-de-France",
+              "country": {
+                  "id": 0,
+                  "name": "France"
+              }
+          },
+          "rrsc" : {
+            "id": 0,
+            "lastName": "rrsc",
+            "firstName": "chef",
+            "email": "chef@laboite.com"
+          }
+      },
+      "oldSoftware": "SmartRX",
+      "oldSoftwareDate": "01/01/1982",
+      "actualSoftware": "DynaPhar",
+      "actualSoftwareDate": "01/01/2001",
+      "orderedSoftware": "LGPI",
+      "orderedSoftwareDate": "01/02/2020",
+      "workstationCount": 7,
+      "confidentialsWorkstationCount": 0,
+      "distance": 200,
+      "travelTime": 2,
+      "details": "Gainsbarre",
+      "installationDate": "01/04/2021"
+  },
+  {
+      "id": 2,
+      "cipCode": "999666",
+      "name": "Paradis Blanc",
+      "address_1": "Je m'en irai dormir",
+      "address_2": "",
+      "postalCode": "63000",
+      "city": "Bordeau",
+      "phone": "06080808",
+      "comment": "Il a niqué la France",
+      "contact" : {
+          "lastName": "Berger",
+          "firstName": "Michel"
+      },
+      "agence" : {
+          "id": 2,
+          "name": "Agence 2",
+          "region": {
+              "id": 0,
+              "name": "Sud-Ouest",
+              "country": {
+                  "id": 0,
+                  "name": "France"
+              }
+          },
+          "rrsc" : {
+            "id": 0,
+            "lastName": "rrsc",
+            "firstName": "chef",
+            "email": "chef@laboite.com"
+          }
+      },
+      "oldSoftware": "WinPharma",
+      "oldSoftwareDate": "01/01/1980",
+      "actualSoftware": "WinPharma",
+      "actualSoftwareDate": "01/01/2000",
+      "orderedSoftware": "LGPI",
+      "orderedSoftwareDate": "02/03/2020",
+      "workstationCount": 72,
+      "confidentialsWorkstationCount": 1,
+      "distance": 100,
+      "travelTime": 1,
+      "details": "beeeeeeehhhhh ",
+      "installationDate": "04/02/2021"
+  },
+  {
+      "id": 3,
+      "cipCode": "007007",
+      "name": "Bond, James Bond",
+      "address_1": "Les diamants sont éternels",
+      "address_2": "",
+      "postalCode": "70000",
+      "city": "MI-6",
+      "phone": "00000001",
+      "comment": "Miss Monepenny",
+      "contact" : {
+          "lastName": "Flemming",
+          "firstName": "Iann"
+      },
+      "agence" : {
+          "id": 0,
+          "name": "Agence 0",
+          "region": {
+              "id": 0,
+              "name": "Grand-Est",
+              "country": {
+                  "id": 0,
+                  "name": "France"
+              }
+          },
+          "rrsc" : {
+            "id": 0,
+            "lastName": "rrsc",
+            "firstName": "chef",
+            "email": "chef@laboite.com"
+          }
+      },
+      "oldSoftware": "CaducielV6",
+      "oldSoftwareDate": "01/11/1998",
+      "actualSoftware": "Lgo2",
+      "actualSoftwareDate": "01/07/2000",
+      "orderedSoftware": "LGPI",
+      "orderedSoftwareDate": "25/06/2020",
+      "workstationCount": 2,
+      "confidentialsWorkstationCount": 0,
+      "distance": 25,
+      "travelTime": 1,
+      "details": "Whooooooo are you, what's your name ?",
+      "installationDate": "01/03/2022"
+  }
+]
+}

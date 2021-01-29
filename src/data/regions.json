@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Grand Est",
+    "country" : {
+      "id" : 0,
+      "name" : "France"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Sud-Ouest",
+    "country" : {
+      "id" : 0,
+      "name" : "France"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Occitanie",
+    "country" : {
+      "id" : 0,
+      "name" : "France"
+    }
+  }
+]
