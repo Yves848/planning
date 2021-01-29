@@ -24,6 +24,7 @@ export interface iRegions {
 }
 
 export interface iSoftware {
+  id : number;
   name: string;
 }
 
@@ -57,7 +58,8 @@ export class WsService {
     const softwares: iSoftware[] = [];
     Logiciels.forEach(logiciel => {
       softwares.push({
-        name: logiciel
+        id : logiciel.id,
+        name: logiciel.name
       })
     })
     return softwares;

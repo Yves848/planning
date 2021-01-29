@@ -1,21 +1,72 @@
 {
   "Logiciels": [
-    "Actipharm",
-    "Caduciel v6",
-    "Esculape v6",
-    "LGPI",
-    "Infosoft",
-    "Leo1",
-    "Leo2",
-    "Lgo2",
-    "Opus",
-    "Periphar",
-    "Pharmaland V7",
-    "Pharmavitale",
-    "SmartRx",
-    "Vindilis",
-    "VisioPharm",
-    "WinPharma",
-    "DynaCaisse"
+    {
+      "id": 0,
+      "name":"Actipharm"
+    },
+    {
+      "id": 0,
+      "name":"Caduciel v6"
+    },
+    {
+      "id": 0,
+      "name":"Esculape v6"
+    },
+    {
+      "id": 0,
+      "name":"LGPI"
+    },
+    {
+      "id": 0,
+      "name":"Infosoft"
+    },
+    {
+      "id": 0,
+      "name":"Leo1"
+    },
+    {
+      "id": 0,
+      "name":"Leo2"
+    },
+    {
+      "id": 0,
+      "name":"Lgo2"
+    },
+    {
+      "id": 0,
+      "name":"Opus"
+    },
+    {
+      "id": 0,
+      "name":"Periphar"
+    },
+    {
+      "id": 0,
+      "name":"Pharmaland V7"
+    },
+    {
+      "id": 0,
+      "name":"Pharmavitale"
+    },
+    {
+      "id": 0,
+      "name":"SmartRx"
+    },
+    {
+      "id": 0,
+      "name":"Vindilis"
+    },
+    {
+      "id": 0,
+      "name":"VisioPharm"
+    },
+    {
+      "id": 0,
+      "name":"WinPharma"
+    },
+    {
+      "id": 0,
+      "name":"DynaCaisse"
+    }
   ]
 }
