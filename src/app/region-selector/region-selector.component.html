@@ -1,4 +1,4 @@
-<mat-card fxLayout="row" fxLayoutGap="30px">
+<mat-card class="regionselect mat-elevation-z8" xLayout="row" fxLayoutGap="30px" fxLayoutAlign="space-evenly center">
   <mat-form-field appearance="fill">
     <mat-label>Région</mat-label>
     <mat-select>
@@ -12,7 +12,7 @@
     <mat-label>Logiciel</mat-label>
     <mat-select>
       <mat-option *ngFor="let software of softwares" [value]="software">
-        {{software}}
+        {{software.name}}
       </mat-option>
     </mat-select>
   </mat-form-field>

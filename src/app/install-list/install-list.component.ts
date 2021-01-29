@@ -21,8 +21,8 @@ export class InstallListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.datasource = this.ws.DATA;
-    console.log(this.datasource);
+    this.datasource = this.ws.PLANNINGS;
+    //console.log(this.datasource);
   }
 
 }

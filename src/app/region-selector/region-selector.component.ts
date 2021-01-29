@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { iSoftware, iRegions, WsService } from '../services/ws.service';
 
 @Component({
   selector: 'app-region-selector',
@@ -6,53 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./region-selector.component.scss'],
 })
 export class RegionSelectorComponent implements OnInit {
-  regions = [
-    {
-      id: 0,
-      name: 'Grand Est',
-      country: {
-        id: 0,
-        name: 'France',
-      },
-    },
-    {
-      id: 1,
-      name: 'Sud-Ouest',
-      country: {
-        id: 0,
-        name: 'France',
-      },
-    },
-    {
-      id: 2,
-      name: 'Occitanie',
-      country: {
-        id: 0,
-        name: 'France',
-      },
-    },
-  ];
+  regions : iRegions[] = [];
 
-  softwares = [
-    'Actipharm',
-    'Caduciel v6',
-    'Esculape v6',
-    'LGPI',
-    'Infosoft',
-    'Leo1',
-    'Leo2',
-    'Lgo2',
-    'Opus',
-    'Periphar',
-    'Pharmaland V7',
-    'Pharmavitale',
-    'SmartRx',
-    'Vindilis',
-    'VisioPharm',
-    'WinPharma',
-    'DynaCaisse',
-  ];
-  constructor() {}
+  softwares : iSoftware[] = [];
+  constructor(private ws: WsService) {
 
-  ngOnInit(): void {}
+  }
+
+  ngOnInit(): void {
+    this.regions = this.ws.REGIONS;
+    this.softwares = this.ws.SOFTWARES;
+  }
 }

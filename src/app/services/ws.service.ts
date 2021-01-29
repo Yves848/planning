@@ -1,52 +1,81 @@
-import { Injectable, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR } from '@angular/core';
-import * as PLANNINGJS from '../../data/planning.json';
-import * as REGIONSJS from '../../data/regions.json';
-import * as SOFTWARESJS from '../../data/software.json';
+import { Injectable } from '@angular/core';
+import { Plannings } from '../../data/planning.json';
+import { Regions } from '../../data/regions.json';
+import { Logiciels } from '../../data/software.json';
 
-export interface installation {
-  cip : string;
-  pharmacie : string;
-  logiciel : string;
+export interface iInstallation {
+  cip: string;
+  pharmacie: string;
+  logiciel: string;
   dateinstall: string;
   codepostal: string;
   ville: string;
   region: string;
 }
 
-export interface regions {
-
+export interface iCountry {
+  id: number;
+  name: string;
+}
+export interface iRegions {
+  id: number;
+  name: string;
+  country: iCountry;
 }
 
-export interface logiciels {
-
+export interface iSoftware {
+  name: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class WsService {
-  Plannings = PLANNINGJS.Plannings;
-  DATA : installation[] = [];
+  PLANNINGS: iInstallation[] = [];
+  REGIONS: iRegions[] = [];
+  SOFTWARES: iSoftware[] = [];
 
   constructor() {
-    this.DATA = this.buildPlannings();
-   }
+    this.PLANNINGS = this.buildPlannings();
+    this.REGIONS = this.buildRegions();
+    this.SOFTWARES = this.buildSoftwares();
+  }
 
-  buildPlannings() : installation[] {
-      console.log(PLANNINGJS);
-      const planning: installation[] = [];
-      this.Plannings.forEach((element) => {
-        planning.push({
-          cip:element.cipCode,
-          pharmacie:element.name,
-          logiciel:element.orderedSoftware,
-          dateinstall: element.installationDate,
-          codepostal: element.postalCode,
-          ville: element.city,
-          region: element.agence.name
-        });
+  buildRegions(): iRegions[] {
+    const regions: iRegions[] = [];
+    Regions.forEach((region) => {
+      regions.push({
+        id: region.id,
+        name: region.name,
+        country: region.country,
+      });
+    });
+    return regions;
+  }
+
+  buildSoftwares(): iSoftware[] {
+    const softwares: iSoftware[] = [];
+    Logiciels.forEach(logiciel => {
+      softwares.push({
+        name: logiciel
       })
-      return planning;
+    })
+    return softwares;
+  }
+
+  buildPlannings(): iInstallation[] {
+    const planning: iInstallation[] = [];
+    Plannings.forEach((element) => {
+      planning.push({
+        cip: element.cipCode,
+        pharmacie: element.name,
+        logiciel: element.orderedSoftware,
+        dateinstall: element.installationDate,
+        codepostal: element.postalCode,
+        ville: element.city,
+        region: element.agence.name,
+      });
+    });
+    return planning;
   }
 }
