@@ -16,7 +16,7 @@ export class InstallListComponent implements OnInit {
   datasource;
 
 
-  constructor(private ws:WsService) { }
+  constructor(public ws:WsService) { }
 
 
 

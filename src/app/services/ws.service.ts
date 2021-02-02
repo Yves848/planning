@@ -24,7 +24,7 @@ export interface iRegions {
 }
 
 export interface iSoftware {
-  id : number;
+  id: number;
   name: string;
 }
 
@@ -35,6 +35,11 @@ export class WsService {
   PLANNINGS: iInstallation[] = [];
   REGIONS: iRegions[] = [];
   SOFTWARES: iSoftware[] = [];
+
+  fRegion;
+  fDateDeb;
+  fDateFin;
+  fLogiciel: string = '';
 
   constructor() {
     this.PLANNINGS = this.buildPlannings();
@@ -56,27 +61,34 @@ export class WsService {
 
   buildSoftwares(): iSoftware[] {
     const softwares: iSoftware[] = [];
-    Logiciels.forEach(logiciel => {
+    Logiciels.forEach((logiciel) => {
       softwares.push({
-        id : logiciel.id,
-        name: logiciel.name
-      })
-    })
+        id: logiciel.id,
+        name: logiciel.name,
+      });
+    });
     return softwares;
   }
 
   buildPlannings(): iInstallation[] {
     const planning: iInstallation[] = [];
+    var badd: boolean = true;
     Plannings.forEach((element) => {
-      planning.push({
-        cip: element.cipCode,
-        pharmacie: element.name,
-        logiciel: element.orderedSoftware,
-        dateinstall: element.installationDate,
-        codepostal: element.postalCode,
-        ville: element.city,
-        region: element.agence.name,
-      });
+      badd = true;
+      if ((this.fLogiciel !== '') && (this.fLogiciel !== 'Tous')) {
+        badd = this.fLogiciel === element.actualSoftware;
+      }
+
+      if (badd)
+        planning.push({
+          cip: element.cipCode,
+          pharmacie: element.name,
+          logiciel: element.actualSoftware,
+          dateinstall: element.installationDate,
+          codepostal: element.postalCode,
+          ville: element.city,
+          region: element.agence.name,
+        });
     });
     return planning;
   }

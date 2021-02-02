@@ -14,6 +14,18 @@ export class RegionSelectorComponent implements OnInit {
 
   }
 
+  regionChange(event) {
+    console.log('Region ', event.value);
+    this.ws.fRegion = event.value;
+
+  }
+
+  softwareChange(event) {
+    console.log('Logiciel ', event.value);
+    this.ws.fLogiciel = event.value.name;
+    this.ws.PLANNINGS = this.ws.buildPlannings();
+  }
+
   ngOnInit(): void {
     this.regions = this.ws.REGIONS;
     this.softwares = this.ws.SOFTWARES;

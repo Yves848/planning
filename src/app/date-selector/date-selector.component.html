@@ -2,14 +2,14 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Début </mat-label>
-    <input matInput [matDatepicker]="datedeb">
+    <input matInput [matDatepicker]="datedeb" (dateChange)="onDateDebChange($event)">
     <mat-datepicker-toggle matSuffix [for]="datedeb"></mat-datepicker-toggle>
     <mat-datepicker #datedeb></mat-datepicker>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Fin </mat-label>
-    <input matInput [matDatepicker]="datefin">
+    <input matInput [matDatepicker]="datefin" (dateChange)="onDateFinChange($event)">
     <mat-datepicker-toggle matSuffix [for]="datefin"></mat-datepicker-toggle>
     <mat-datepicker #datefin></mat-datepicker>
   </mat-form-field>
